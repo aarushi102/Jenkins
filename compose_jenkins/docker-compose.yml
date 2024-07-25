@@ -1,0 +1,14 @@
+version: '3.8'
+services: 
+  jenkins:
+    container_name: jenkins
+    image: jenkins/jenkins
+    ports:
+      - "8083:8080"
+    volumes:
+      - ./jenkins_data:/var/jenkins_home
+    networks:
+      - net
+    
+networks:
+  net:
